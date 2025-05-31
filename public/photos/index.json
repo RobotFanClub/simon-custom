@@ -1,9 +1,0 @@
-{
-	"version": "https://jsonfeed.org/version/1",
-	"title": "Simon's Test Blog",
-	"icon": "https://avatars.micro.blog/avatars/2024/10/1583545.jpg",
-	"home_page_url": "https://simonpeng-test.micro.blog/",
-	"feed_url": "https://simonpeng-test.micro.blog/photos/index.json",
-	"items": [
-	]
-}
