@@ -1,0 +1,21 @@
+<rss version="2.0">
+  <channel>
+    <title>Simon&#39;s Test Blog</title>
+    <link>https://simonpeng-test.micro.blog/</link>
+    <description></description>
+    
+    <language>en</language>
+    
+    <lastBuildDate>Fri, 31 Jan 2025 19:07:06 -0400</lastBuildDate>
+    <item>
+      <title></title>
+      <link>https://simonpeng-test.micro.blog/2025/01/31/welcome-to-your-test-blog.html</link>
+      <pubDate>Fri, 31 Jan 2025 19:07:06 -0400</pubDate>
+      
+      <guid>http://simonpeng-test.micro.blog/2025/01/31/welcome-to-your-test-blog.html</guid>
+      <description>&lt;p&gt;Welcome to your test blog! You can create new posts here to test theme and design changes.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
