@@ -1,9 +1,11 @@
 <header class="site-header">
 
   <div class="wrapper">
-
-    <a class="site-title" href="/">{{ .Site.Title }}</a>
-
+    <div class="site-icon-and-name">
+      <a href="/"><img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }} Profile Photo" class="profile_photo u-photo" width="70" height="70"></a>  
+      <a class="site-title" href="/">{{ .Site.Title }}</a>
+    </div>
+    <div>
     <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">
@@ -23,6 +25,7 @@
 		{{ end }}
       </div>
     </nav>
+    </div>
 
   </div>
 

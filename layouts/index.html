@@ -1,24 +1,38 @@
 {{ define "main" }}
-<div class="home h-feed">
+<div class="home-intro">
+  <a href="/"><img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }} Profile Photo" width="300" height="300"></a>
+  <span>
+    <h1 class="feature-heading">Hi, I'm Simon!</h1>
+    <p class="description">{{ .Site.Params.itunes_description | safeHTML }}</p>
+  </span>
+</div>
+<div class="recent-posts-container">
+  <div class="recent-posts">
+  <h2 class="feature-heading">Latest Posts</h2>
+  <div class="feed-container">
+    <p style="margin-top: 20px;">I'm a proud luddite and I'm doing my best to move away from the tech-monopoly platforms. 
+      While you can still find me on Instagram and Substack, I try to follow the POSSE system 
+      and keep everything I post originated from or cross-posted here.</p>
+    <div class="feed-preview">
+      <ul class="post-list">
+      {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 5) }}
+      {{ range $paginator.Pages  }}
+          <li class="post-container">
+        {{ if .Title }}
+          <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        {{ end }}
 
-  <ul class="post-list">
-	{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 25) }}
-	{{ range $paginator.Pages  }}
-      <li class="h-entry">
-		{{ if .Title }}
-			<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-		{{ end }}
+            <a href="{{ .Permalink }}" class="u-url"><span class="post-meta"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a>
 
-        <a href="{{ .Permalink }}" class="u-url"><span class="post-meta"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a>
-
-        <div class="e-content">
-         	{{ .Content }}
-        </div>
-      </li>
-    {{ end }}
-  </ul>
-
+            <div class="e-content">
+              {{ .Content }}
+            </div>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
   <p class="rss-subscribe">subscribe <a href="{{ "feed.xml" | absURL }}">via RSS</a></p>
-
+  </div>
 </div>
 {{ end }}
