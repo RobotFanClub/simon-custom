@@ -6,7 +6,7 @@
 	--accent1: #333333;
 	--accent2: #666666;
 	--background: #fffff7;
-	--code: #f942ff;
+	--code: #ffcd42;
 	--button-text: #ffffff;
 	--blockquote: #fffee0;
 	--blockquote-border: #e5d600;
@@ -74,6 +74,36 @@
 	}
 }
 
+/* Fonts */
+
+@font-face{
+	font-family: atkinson-hyperlegible;
+	src: url('https://simonpeng-test.micro.blog/uploads/2025/atkinsonhyperlegible-regular.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face{
+	font-family: atkinson-hyperlegible;
+	src: url('https://simonpeng-test.micro.blog/uploads/2025/atkinsonhyperlegible-italic.ttf') format('ttf');
+	font-weight: normal;
+	font-style: italic;
+	}
+
+@font-face{
+	font-family: atkinson-hyperlegible;
+	src: url('https://simonpeng-test.micro.blog/uploads/2025/atkinsonhyperlegible-bold.ttf') format('ttf');
+	font-weight: bold;
+	font-style: normal;
+	}
+
+@font-face{
+	font-family: atkinson-hyperlegible;
+	src: url('https://simonpeng-test.micro.blog/uploads/2025/atkinsonhyperlegible-bold-italic.ttf') format('ttf');
+	font-weight: bold;
+	font-style: italic;
+	}
+	
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
@@ -266,6 +296,7 @@ display: flex;
 .feed-preview {
   margin: 1em;
   flex-grow: 2;
+  min-width: 60%;
 }
 
 .feed-preview a {
@@ -349,6 +380,130 @@ h1 { font-size: 26px; margin-bottom: 0px; }
 #post-nav { padding-top: 25px; }
 
 #post-nav .prev { padding-right: 10px; }
+
+/* trying to set up table styling for the resources page */
+table {
+    max-width: 80em;
+    margin-right: auto;
+    margin-left: auto;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 20px;
+    
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+    border-right: var(--border_stroke);
+    border-right-color: var(--code);
+}
+
+thead
+{
+    padding: 20px;
+    text-align: center;
+    border: var(--border_stroke);
+    border-color: var(--code);
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: var(--code);
+	color: #000000;
+}
+
+td
+ {
+    padding: 20px;
+    border: var(--border_stroke);
+    border-color: var(--code);
+}
+
+td:nth-child(1)::first-line
+{
+    font-weight: bold;
+}
+
+/* setting up cards for link page */
+.container {
+	column-width: 250px;
+	column-gap: 20px;
+}
+
+.card {
+	break-inside: avoid;
+	border: var(--card_stroke);
+	border-radius: var(--rounded_corners);
+	padding: 2em 2em 1em;
+	margin: 0 0 1em 0;
+	text-align: left;
+	font-size: 18px;
+	background-color: var(--card_bg);
+	border-color: var(--card_outline);
+	color: var(--card_text);
+
+	/* drop-shadow( <length> <length> <blur> <color> ) */
+	filter: drop-shadow(0px 4px 2px #00000020);
+
+	/*applying easing when returning from hover state*/
+	transition-timing-function: ease-in;
+	transition: 0.2s;
+
+}
+.card:hover {
+	transition-timing-function: ease-out;
+	transition: 0.2s;
+	transform: translateY(-5px);
+	/* transform: rotate(0.5deg); */
+	filter: drop-shadow(0px 8px 6px #00000020);
+}
+.link_description {
+	font-size: 14px;
+}
+
+.card_avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: var(--rounded_corners);
+	margin-bottom: 5px;
+}
+
+/* Smaller cards for temporary or less important links */
+.link_card {
+	display: grid;
+	grid-template-columns: 10% auto;
+	break-inside: avoid;
+	border: var(--card_stroke);
+	border-radius: var(--rounded_corners);
+	padding: 1em 1em 0em;
+	text-align: left;
+	font-size: 1rem;
+	font-weight: bold;
+	background-color: var(--card_bg);
+	border-color: var(--card_outline);
+	color: var(--card_text);
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+	
+	/* drop-shadow( <length> <length> <blur> <color> ) */
+	filter: drop-shadow(0px 4px 2px #00000020);
+
+	/*applying easing when returning from hover state*/
+	transition-timing-function: ease-in;
+	transition: 0.2s;
+}
+
+.link_card:hover {
+	transition-timing-function: ease-out;
+	transition: 0.2s;
+	transform: translateY(-5px);
+	transform: rotate(0.5deg);
+	filter: drop-shadow(0px 8px 6px #00000020);
+	background-color: var(--cardbg_hover);
+}
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }
