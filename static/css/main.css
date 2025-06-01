@@ -103,7 +103,7 @@
 	font-weight: bold;
 	font-style: italic;
 	}
-	
+
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
@@ -199,12 +199,12 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .site-nav { float: left; }
 .site-nav .menu-icon { display: none; }
-.site-nav .page-link { color: var(--text) line-height: 1.5; }
+.site-nav .page-link { color: var(--text); line-height: 1.5; }
 .site-nav .page-link:not(:first-child) { margin-left: 20px; }
-@media screen and (max-width: 600px) { .site-nav { position: absolute; top: 9px; right: 30px; background-color: #fdfdfd; border: 1px solid #e8e8e8; border-radius: 5px; text-align: right; }
+@media screen and (max-width: 600px) { .site-nav { position: absolute; top: 9px; right: 30px; background-color: var(--background); border: 1px solid var(--code); border-radius: 5px; text-align: right; }
   .site-nav .menu-icon { display: block; float: right; width: 36px; height: 26px; line-height: 0; padding-top: 10px; text-align: center; }
   .site-nav .menu-icon > svg { width: 18px; height: 15px; }
-  .site-nav .menu-icon > svg path { fill: #424242; }
+  .site-nav .menu-icon > svg path { fill: var(--code); }
   .site-nav .trigger { clear: both; display: none; }
   .site-nav:hover .trigger { display: block; padding-bottom: 5px; }
   .site-nav .page-link { display: block; padding: 5px 10px; } }
