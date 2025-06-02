@@ -78,28 +78,28 @@
 
 @font-face{
 	font-family: atkinson-hyperlegible;
-	src: url('https://simonpeng-test.micro.blog/uploads/2025/atkinsonhyperlegible-regular.ttf') format('ttf');
+	src: url('/static/webfonts/AtkinsonHyperlegible-Regular.ttf') format('ttf');
 	font-weight: normal;
 	font-style: normal;
 	}
 
 @font-face{
 	font-family: atkinson-hyperlegible;
-	src: url('https://simonpeng-test.micro.blog/uploads/2025/atkinsonhyperlegible-italic.ttf') format('ttf');
+	src: url('/static/webfonts/AtkinsonHyperlegible-Italic.ttf') format('ttf');
 	font-weight: normal;
 	font-style: italic;
 	}
 
 @font-face{
 	font-family: atkinson-hyperlegible;
-	src: url('https://simonpeng-test.micro.blog/uploads/2025/atkinsonhyperlegible-bold.ttf') format('ttf');
+	src: url('/static/webfonts/AtkinsonHyperlegible-Bold.ttf') format('ttf');
 	font-weight: bold;
 	font-style: normal;
 	}
 
 @font-face{
 	font-family: atkinson-hyperlegible;
-	src: url('https://simonpeng-test.micro.blog/uploads/2025/atkinsonhyperlegible-bold-italic.ttf') format('ttf');
+	src: url('/static/webfonts/AtkinsonHyperlegible-BoldItalic.ttf') format('ttf');
 	font-weight: bold;
 	font-style: italic;
 	}
