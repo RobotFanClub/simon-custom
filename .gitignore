@@ -1,11 +1,6 @@
-content/
-
-data/
-
-public/
-
-resources/
-
 .hugo_build.lock
-
 config.json
+content/
+data/
+public/
+resources/
