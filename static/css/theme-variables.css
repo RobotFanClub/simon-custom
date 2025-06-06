@@ -1,0 +1,86 @@
+/* Light mode */
+:root {
+	--text: #000000;
+	--link: #470d6e;
+	--link_visited: #470d6e;
+	--accent1: #333333;
+	--accent2: #666666;
+	--background: #fffff7;
+	--code: #ffcd42;
+	--button-text: #ffffff;
+	--blockquote: #fffee0;
+	--blockquote-border: #e5d600;
+	--aside: #e0f7fa;
+	--aside-border: #0097a7;
+	--note: #e8f5e9;
+	--note-border: #d5e1d6;
+	--alert: #ffebee;
+	--alert-border: #d32f2f;
+	--field: #fffee0;
+	--mark: #FFFF99;
+	--post_preview_BG: #ffffff;
+	--rev-bg: #238fce;
+	--rev-link: #8acef6;
+	--simon-yellow: #fed966FF;
+
+	/* styling cards on link page */
+	--card_bg: #FFFFFF;
+	--card_text: #000000;
+	--card_outline: #1b6c9c;
+	--card_stroke: 2px solid #1b6c9c;
+	--cardbg_hover: #fff3d2;
+
+    /* table styling */
+    --border_stroke: 2px solid;
+
+	/* other global styling variables */
+	--rounded_corners: 0.666em;
+
+    --site-title-size: 1.5em;
+
+    /* Page Width Control */
+    --width-content: 40rem;
+    --width-content-medium: 60rem;
+    --width-content-large: 90rem;
+
+
+    /* Copying Gutter Setup from a Tutorial */
+
+    --space-m: clamp(1.5rem, 1.4348rem + 0.3261vw, 1.6875rem);
+    --width-site-gutter: var(--space-m);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text: #f8f8f2;
+		--link: #ffcd42;
+		--link_visited: #915f13;
+		--accent1: #f8f8f2;
+		--accent2: #f8f8f2;
+		--background: #3c2e48;
+		--code: #83307c;	
+		--button-text: #282a36;
+		--blockquote: #44475a;
+		--blockquote-border: #6272a4;
+		--aside: #6272a4;
+		--aside-border: #7797b7	;
+		--note: #3f444a;
+		--note-border: #4f545a;
+		--alert: #ff5555;
+		--alert-border: #f6c010;
+		--field: #44475a;
+		--mark: #FFFF99;
+		--post_preview_BG: #362a3b;
+		--rev-bg: #251b38;
+		--rev-link: #9243d3;
+		--simon-yellow: #251b38;
+
+			/* styling cards on link page */
+		--card_bg: #362a3b;
+		--card_text: #ffffff;
+		--card_outline: #ffcd42;
+		--card_stroke: 1px solid;
+		--cardbg_hover: #341043;
+	}
+}

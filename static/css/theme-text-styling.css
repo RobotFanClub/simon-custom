@@ -1,0 +1,81 @@
+/* Since I'm pretty particular about typography, it's useful to have a dedicated space for type styling */
+@import url(./theme-fonts.css);
+@import url(./theme-variables.css);
+
+/* Main global text styling from original theme */
+
+body { 
+  font-family: 'atkinson-hyperlegible', Helvetica, Arial, sans-serif; 
+  font-size: 16px;
+  line-height: 1.5; 
+  font-weight: normal; 
+  color: var(--text); 
+  background-color: var(--background); 
+  -webkit-text-size-adjust: 100%; 
+}
+
+/** Headings */
+
+h1 { 
+    font-size: 32px; 
+    font-weight: 300;
+    margin-bottom: 0px; 
+}
+
+h2 { 
+    font-size: 20px;
+    font-weight: 600; 
+    margin-bottom: 0px; 
+}
+
+h3 { 
+    font-size: 20px; 
+    margin-bottom: 0px; 
+}
+
+h4 { 
+    font-size: 26px; 
+    margin-bottom: 0px; 
+}
+
+h5 { 
+    font-size: 26px; 
+    margin-bottom: 0px; 
+}
+
+h6 { 
+    font-size: 26px; 
+    margin-bottom: 0px; 
+}
+
+/** Lists */
+ul, ol { margin-left: 30px; }
+
+li > ul, li > ol { margin-bottom: 0; }
+
+
+/** Blockquotes */
+blockquote { 
+    font-family: 'baskerville';
+    background-color: var(--blockquote); 
+    border-left:  solid var(--blockquote-border); 
+    padding: 1em; 
+    font-size: 18px;
+    font-style: italic; 
+}
+
+blockquote > :last-child { margin-bottom: 0; }
+
+/** Code formatting */
+pre, code { 
+    font-family: 'drafting-mono';
+    font-weight: 300;
+    font-size: 15px; 
+    border: 1px solid #e8e8e8; 
+    border-radius: 3px; 
+    background-color: #eef; }
+
+code { padding: 1px 5px; }
+
+pre { padding: 8px 12px; overflow-x: scroll; }
+pre > code { border: 0; padding-right: 0; padding-left: 0; }
