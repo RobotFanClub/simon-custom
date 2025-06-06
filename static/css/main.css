@@ -240,6 +240,31 @@ a:hover, .simon-button {
 	padding-bottom: 2em;
 }
 
+.tag-list {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: auto auto auto auto auto;
+	justify-content: start;
+}
+
+.archive-tags {
+	font-family: 'drafting-mono';
+	font-size: 14px;
+	color: var(--background);
+	background-color: var(--accent2);
+	padding: 0.4em 0.8em;
+	border-radius: var(--rounded_corners);
+	width: fit-content;
+}
+
+.archive-tags a {
+	color: inherit;
+}
+
+.archive-tags a:visited {
+	color: inherit;
+}
+
 @media screen and (max-width: 650px) {
 	.two-col-grid {
 		display: grid;

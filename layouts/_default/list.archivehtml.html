@@ -1,16 +1,20 @@
 {{ define "main" }}
-
 	{{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
 	{{ if gt (len $list) 0 }}
 		<div class="archive_categories archive-post-page" style="border-bottom: 1px solid lightgray; padding-bottom: 15px; margin-bottom: 30px;">
+			<h1 class="post-title" style="padding-bottom: 1em;">{{ .Title }}</h1>
+			<h2>Categories</h2>
+			<div class="tag-list">
 			{{ range $list }}
-				<p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+				<a href="{{ .Permalink }}"><div class="archive-tags"><i class="fa-solid fa-tag" style="color: var(--background);"></i>  {{ .Title }}</div></a>
 			{{ end }}
+			</div>
 		</div>
 	{{ end }}
-	
+	<h2 style="padding-bottom: 1em;">All Posts</h2>
 	{{ $list := (where .Site.Pages "Type" "post") }}
 	<div class="h-feed">
+		
 		{{ range $list }}
 			<div style="font-family: 'drafting-mono'; font-size: 14px;">
 				<p class="h-entry">

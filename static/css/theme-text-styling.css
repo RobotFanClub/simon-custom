@@ -71,9 +71,9 @@ pre, code {
     font-family: 'drafting-mono';
     font-weight: 300;
     font-size: 15px; 
-    border: 1px solid #e8e8e8; 
+    border: 1px solid; 
     border-radius: 3px; 
-    background-color: #eef; }
+    background-color: var(--code); }
 
 code { padding: 1px 5px; }
 
