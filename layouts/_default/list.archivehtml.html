@@ -1,12 +1,12 @@
 {{ define "main" }}
 	{{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
 	{{ if gt (len $list) 0 }}
-		<div class="archive_categories archive-post-page" style="border-bottom: 1px solid lightgray; padding-bottom: 15px; margin-bottom: 30px;">
+		<div class="archive_categories archive-post-page" style="padding-bottom: 10px; margin-bottom: 20px;">
 			<h1 class="post-title" style="padding-bottom: 1em;">{{ .Title }}</h1>
 			<h2>Categories</h2>
 			<div class="tag-list">
 			{{ range $list }}
-				<a href="{{ .Permalink }}"><div class="archive-tags"><i class="fa-solid fa-tag" style="color: var(--background);"></i>  {{ .Title }}</div></a>
+				<a href="{{ .Permalink }}"><div class="archive-tags"><i class="fa-solid fa-tag" style="color: var(--card_text);"></i>  {{ .Title }}</div></a>
 			{{ end }}
 			</div>
 		</div>
