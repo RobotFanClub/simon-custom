@@ -1,0 +1,30 @@
+{{ define "main" }}
+<header class="post-header">
+	<h1 class="post-title" style="margin-top: 1em;">My Work</h1>
+</header>
+<p>&#128679; This is a work-in-progress portfolio. &#128679;</p> 
+<p>It automatically pulls the first image from any posts in the category "my-work" and arranges them here. Currently I'm just pulling random posts with images, but eventually there will be actual work here.</p>
+	<div class="portfolio-grid large-width-content">
+		{{ $pages := where .Site.Pages "Type" "post" }}
+		{{ $work := (where .Site.Pages "Params.categories" "intersect" (slice "my-work")) }}
+		{{ range $work }}
+			<div class="portfolio-entry">
+				<div class="portfolio-frame">
+					<a href="{{ .Permalink }}">
+						{{ with .Params.photos}}
+							{{ range first 1 . }}
+								<img class="portfolio-image" src="{{ . }}" loading="lazy" />
+							{{ end }}
+						{{ end }}
+					</a>
+				</div>
+					<p>
+						{{ if .Title }}
+						<a href="{{ .Permalink }}"><p class="portfolio-title">{{ .Title }} →</a>
+						{{ end }}
+					</p>
+			</div>
+		{{ end }}
+	</div>
+</div>
+{{ end }}

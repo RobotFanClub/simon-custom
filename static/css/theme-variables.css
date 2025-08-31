@@ -45,6 +45,9 @@
     --width-content-large: 90rem;
 
 
+	/* Global Responsive Styling */
+	--mobile-width: 650px;
+
     /* Copying Gutter Setup from a Tutorial */
 
     --space-m: clamp(1.5rem, 1.4348rem + 0.3261vw, 1.6875rem);
