@@ -1,5 +1,8 @@
 .hugo_build.lock
-content/
+content/2023/
+content/2024/
+content/2025/
+content/replies/
 data/
 public/
 resources/
