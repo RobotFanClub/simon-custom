@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+<div class="medium-width-content">
+    <!--Container holds the cards in columns defined in the custom CSS styling-->
+
+    <div class="link-container">
+
+        <div class="main-links">
+            
+            <h1>My Links</h2>
+
+            <div class="main-link-item card">
+                <div class="ec-logo">
+                    <a href="https://www.everyonescreative.net/" target="_blank" alt="Link to Everyone's Creative" title="Visit Everyone's Creative">
+                        <img src="/assets/Images/EC-Branding_Logo-Name-Blobs.svg" alt="Everyone's Creative Logo">
+                    </a>
+                </div>
+                <p class="link_description">
+                Newsletter exploring what it means to make things, challenge conventional wisdom about art, and invite everyone into the "creative" club.
+                </p>
+                <div class="simon-button" style="font-size: 0.8em;">
+                    <a href="https://www.everyonescreative.net/" target="_blank" alt="Link to Everyone's Creative" title="Visit Everyone's Creative">Visit Everone's Creative</a>
+                </div>
+            </div>
+
+            <div class="main-link-item">
+                
+                {{ partial "socials-list" .}}
+                
+            </div>
+
+    </div>
+
+    <div class="more-links">
+        
+        {{ partial "more-links" .}}
+
+    </div>
+
+</div>
+
+{{ end }}

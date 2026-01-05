@@ -1,43 +1,17 @@
 /* Breaking up the CSS to make it easier to work on. Not sure if micro.blog will import this nicely, though. */
-@import url('./default-theme-style.css');
+@import url('backup/default-theme-style.css');
 @import url('./theme-variables.css');
-@import url('./theme-fonts.css');
-@import url('./theme-text-styling.css');
+@import url('typography/theme-fonts.css');
+@import url('typography/theme-text-styling.css');
+@import url('components/footer.css');
+@import url('components/links-page.css');
+@import url('components/about-page.css');
 
 /** Basic styling */
 
-hr {
-	margin: 2em 0;
-	border: none;
-	text-align: center;
-}
-
-hr::before {
-	font-size: 3em;
-	content: "∴";
-	display: block;
-	color: var(--rev-bg);
-}
-
-.feature-heading {
-  font-size: 3em;
-}
-
-/** Links */
-a { color: var(--link); text-decoration: none; }
-a:visited { color: var(--link_visited) }
-a:hover { color: var(--link); text-decoration: underline; }
-
-/* Button */
-
-a .simon-button {
-	color: var(--text);
-	text-decoration: none;
-}
-
-a:hover, .simon-button {
-	color: var(--text);
-	text-decoration: none;
+#page-container {
+    position: relative;
+    min-height: 85vh;
 }
 
 /* width-styling */
@@ -60,16 +34,66 @@ a:hover, .simon-button {
     max-inline-size: none;
 }
 
+hr {
+	margin: 2em 0;
+	border: none;
+	text-align: center;
+}
+
+hr::before {
+	font-size: 3em;
+	content: "∴";
+	display: block;
+	color: var(--rev-bg);
+}
+
+.feature-heading {
+  font-size: 3em;
+}
+
+/** Links */
+p a { color: var(--link); text-decoration: none; }
+p a:visited { color: var(--link_visited) }
+p a:hover { color: var(--link); text-decoration: underline; }
+
+/* Button */
+
+.simon-button a {
+	color: var(--text);
+	text-decoration: none;
+}
+
+.simon-button a:visited {
+	color: var(--text);
+}
+
+.simon-button a:hover {
+	color: var(--text);
+	text-decoration: none;
+}
+
+
+
 /** Clearfix 
 .wrapper:after, .footer-col-wrapper:after { content: ""; display: table; clear: both; }*/
 
 
 /** Site header */
 .site-header { 
-  background-color: var(--simon-yellow);
-  min-height: 80px; 
-  position: relative;
-  padding: 2em 2em; }
+ 	background-color: var(--simon-yellow);
+  	min-height: 100px; 
+  	position: relative;
+  	padding: 2em 2em; 
+	background-size: cover;
+}
+
+.site-header a {
+	text-decoration: none;
+}
+
+.site-header a:hover {
+	text-decoration: underline;
+}
 
 .site-icon-and-name { 
   margin: 0 0 10px 0; 
@@ -129,40 +153,14 @@ a:hover, .simon-button {
 .site-title { font-size: var(--site-title-size); line-height: 56px; letter-spacing: -1px; }
 .site-title, .site-title:visited { color: var(--text); }
 
-/* Site footer */
-.site-footer { 
-	padding: 30px 0; 
-	font-size: 12px; 
-	text-align: left; 
-	border-top: 15px solid var(--alert-border);
-}
-
-.footer-heading { font-size: 18px; margin-bottom: 15px; }
-
-.contact-list, .social-media-list { list-style: none; margin-left: 0; }
-
-.footer-col-wrapper { font-size: 15px; color: #828282; margin-left: -15px; }
-
-.footer-col { float: left; margin-bottom: 15px; padding-left: 15px; }
-
-.footer-col-1 { width: -webkit-calc(35% - (30px / 2)); width: calc(35% - (30px / 2)); }
-
-.footer-col-2 { width: -webkit-calc(20% - (30px / 2)); width: calc(20% - (30px / 2)); }
-
-.footer-col-3 { width: -webkit-calc(45% - (30px / 2)); width: calc(45% - (30px / 2)); }
-
-@media screen and (max-width: 800px) { .footer-col-1, .footer-col-2 { width: -webkit-calc(50% - (30px / 2)); width: calc(50% - (30px / 2)); }
-  .footer-col-3 { width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
-@media screen and (max-width: 600px) { .footer-col { float: none; width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
-
 /** Homepage Content */
 .home-intro {
 	display: grid;
-	grid-template-columns: 33.33% auto;
+	grid-template-columns: 25% 50%;
 	flex-wrap: nowrap;
 	gap: 20px;
 	align-items: center;
-	padding-top: .5em;
+	padding-top: 2em;
 	padding-bottom: 2em;
 	max-width: fit-content;
 }
@@ -177,6 +175,8 @@ a:hover, .simon-button {
 	width: fit-content;
 	height: auto;
 	padding: .7em;
+	border-radius: var(--rounded_corners);
+	border: solid 2px var(--code);
 }	
 
 .simon-button h3 {
@@ -191,7 +191,7 @@ a:hover, .simon-button {
 /* Recent Posts Section - Homepage */
 
 .recent-posts-bg {
-    background-color: var(--rev-bg);
+    background-color: var(--background);
 	padding-bottom: 1em;
 }
 
@@ -207,7 +207,7 @@ a:hover, .simon-button {
 
 .feed-container {
   display: grid;
-  grid-template-columns: 33.33% auto;
+  grid-template-columns: 75% auto;
   gap: 2em;
   align-items: start;
 }
@@ -231,12 +231,17 @@ a:hover, .simon-button {
 .post-preview-title a {
 	font-size: 1.25em;
 	color: var(--text);
+	text-decoration: none;
 }
 
 .post-date {
 	font-size: 14px;
 	color: var(--accent2);
 	padding-bottom: 1em;
+}
+
+.post-date a {
+	text-decoration: none;
 }
 
 .post-text {
@@ -359,86 +364,6 @@ td
 td:nth-child(1)::first-line
 {
     font-weight: bold;
-}
-
-/* setting up cards for link page */
-.container {
-	column-width: 250px;
-	column-gap: 20px;
-}
-
-.card {
-	break-inside: avoid;
-	border: var(--card_stroke);
-	border-radius: var(--rounded_corners);
-	padding: 2em 2em 1em;
-	margin: 0 0 1em 0;
-	text-align: left;
-	font-size: 18px;
-	background-color: var(--card_bg);
-	border-color: var(--card_outline);
-	color: var(--card_text);
-
-	/* drop-shadow( <length> <length> <blur> <color> ) */
-	filter: drop-shadow(0px 4px 2px #00000020);
-
-	/*applying easing when returning from hover state*/
-	transition-timing-function: ease-in;
-	transition: 0.2s;
-
-}
-.card:hover {
-	transition-timing-function: ease-out;
-	transition: 0.2s;
-	transform: translateY(-5px);
-	/* transform: rotate(0.5deg); */
-	filter: drop-shadow(0px 8px 6px #00000020);
-}
-.link_description {
-	font-size: 14px;
-}
-
-.card_avatar {
-	width: 50px;
-	height: 50px;
-	border-radius: var(--rounded_corners);
-	margin-bottom: 5px;
-}
-
-/* Smaller cards for temporary or less important links */
-.link_card {
-	display: grid;
-	grid-template-columns: 10% auto;
-	break-inside: avoid;
-	border: var(--card_stroke);
-	border-radius: var(--rounded_corners);
-	padding: 1em 1em 0em;
-	text-align: left;
-	font-size: 1rem;
-	font-weight: bold;
-	background-color: var(--card_bg);
-	border-color: var(--card_outline);
-	color: var(--card_text);
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 1em;
-	
-	/* drop-shadow( <length> <length> <blur> <color> ) */
-	filter: drop-shadow(0px 4px 2px #00000020);
-
-	/*applying easing when returning from hover state*/
-	transition-timing-function: ease-in;
-	transition: 0.2s;
-}
-
-.link_card:hover {
-	transition-timing-function: ease-out;
-	transition: 0.2s;
-	transform: translateY(-5px);
-	transform: rotate(0.5deg);
-	filter: drop-shadow(0px 8px 6px #00000020);
-	background-color: var(--cardbg_hover);
 }
 
 /* Portfolio Styling */

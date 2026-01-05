@@ -4,7 +4,7 @@
 	--link: #470d6e;
 	--link_visited: #470d6e;
 	--accent1: #333333;
-	--accent2: #666666;
+	--accent2: #b7b7b7;
 	--background: #fffff7;
 	--code: #ffcd42;
 	--button-text: #ffffff;
@@ -28,14 +28,14 @@
 	--card_bg: #FFFFFF;
 	--card_text: #000000;
 	--card_outline: #1b6c9c;
-	--card_stroke: 2px solid #1b6c9c;
+	--card_stroke: 2px solid var(--accent2);
 	--cardbg_hover: #fff3d2;
 
     /* table styling */
     --border_stroke: 2px solid;
 
 	/* other global styling variables */
-	--rounded_corners: 0.666em;
+	--rounded_corners: 0.5em;
 
     --site-title-size: 1.5em;
 

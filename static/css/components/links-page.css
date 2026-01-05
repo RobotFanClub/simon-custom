@@ -1,0 +1,172 @@
+/* setting up link page */
+
+.link-container {
+	display: grid;
+	grid-template-columns: 66.666% auto;
+	gap: 2em;
+	padding: 2em 0 2em 0;
+}
+
+.main-links {
+    display: grid;
+	width: auto;
+    gap: 1em;
+}
+
+.main-link-item {
+	display: grid;
+	grid-template-rows: auto auto;
+	gap: 0.5em;
+	padding: 1em 0 1em 0;
+	max-width: 80%;
+}
+
+.ec-logo {
+	width: 20em;
+	height: auto;
+	
+	/*applying easing when returning from hover state*/
+	transition-timing-function: ease-in;
+	transition: 0.2s;
+}
+
+.ec-logo:hover {
+	transition-timing-function: ease-out;
+	transition: 0.2s;
+	transform: translateY(-5px);
+	transform: rotate(-0.5deg);
+	transform-origin: 0;
+}
+
+.main-link-title {
+	max-width: 20em;
+}
+
+.socials-grid {
+	display: inline-flex;
+	grid-template-columns: auto auto auto;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+
+.socials-grid a {
+	text-decoration: none;
+}
+
+.link-icon {
+	width: 60px;
+	height: auto;
+}
+
+.more-links {
+    display: grid;
+    grid-template-columns: auto;
+    height: fit-content;
+    gap: 1em;
+    
+}
+
+.card {
+	break-inside: avoid;
+	border: var(--card_stroke);
+	border-radius: var(--rounded_corners);
+	padding: 1em;
+	text-align: left;
+	font-size: 14px;
+	background-color: var(--card_bg);
+	border-color: var(--card_outline);
+	color: var(--card_text);
+	width: fit-content;
+
+	/* drop-shadow( <length> <length> <blur> <color> ) */
+	filter: drop-shadow(0px 4px 2px #00000020);
+
+	/*applying easing when returning from hover state*/
+	transition-timing-function: ease-in;
+	transition: 0.2s;
+
+}
+
+.card:hover {
+	transition-timing-function: ease-out;
+	transition: 0.2s;
+	transform: translateY(-3px);
+	/* transform: rotate(0.5deg); */
+	filter: drop-shadow(0px 4px 2px #00000020);
+}
+.link_description {
+	font-size: 14px;
+}
+
+.card_avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: var(--rounded_corners);
+	margin-bottom: 5px;
+}
+
+/* Smaller cards for temporary or less important links */
+.link_card {
+	display: grid;
+	grid-template-columns: 10% auto;
+	break-inside: avoid;
+	border: var(--card_stroke);
+	border-radius: var(--rounded_corners);
+	padding: 1em 1em 0em;
+	text-align: left;
+	font-size: 14px;
+	background-color: var(--card_bg);
+	border-color: var(--card_outline);
+	color: var(--card_text);
+	width: auto;
+    height: fit-content;
+	
+	/* drop-shadow( <length> <length> <blur> <color> ) */
+	filter: drop-shadow(0px 4px 2px #00000020);
+
+	/*applying easing when returning from hover state*/
+	transition-timing-function: ease-in;
+	transition: 0.2s;
+}
+
+.link_card:hover {
+	transition-timing-function: ease-out;
+	transition: 0.2s;
+	transform: translateY(-5px);
+	transform: rotate(0.5deg);
+	filter: drop-shadow(0px 8px 6px #00000020);
+	background-color: var(--cardbg_hover);
+}
+
+@media screen and (max-width: 660px) {
+
+    .link-container {
+        grid-template-columns: auto;
+        gap: 0;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+
+    .main-link-item {
+        max-width: unset;
+    }
+
+    .ec-logo {
+        max-width: 80%;
+    }
+
+    .more-links {
+        max-width: 100%;
+    }
+
+    .link_card {
+        width: auto;
+        max-width: 70%;
+        padding: auto;
+        break-inside: unset;
+        margin: 0;
+    }
+    
+}

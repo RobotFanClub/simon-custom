@@ -1,0 +1,20 @@
+/* About Page Styling */
+
+.about-wrapper {
+    margin-top: 2em;
+}
+
+.about-bio {
+
+}
+
+.about-headshot {
+    width: 300px;
+    height: auto;
+    margin: 0 2em 1.5em 0;
+    float: left;
+}
+
+.about-bio-text {
+    font-family: inherit;
+}

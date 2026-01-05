@@ -1,36 +1,41 @@
 {{ define "main" }}
-<div class="wrapper medium-width-content">
-  <div class="home-intro">
-    <a href="/"><img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }} Profile Photo" width="auto" height="100%"></a>
-    <div class="home-intro-text">
-      <h1 class="feature-heading">Hi, I'm Simon!</h1>
-      <p>{{ .Site.Params.itunes_description | safeHTML }}</p>
-      <a href="/about" target="_self"><h3 class="simon-button">More About Me</h3></a>
-    </div>
-  </div>
+
+<div class="medium-width-content">
+  
+  {{ partial "bio_intro.html" . }}
+
 </div>
-  <div class="recent-posts-bg wrapper full-width-content">
-    <div class="recent-posts medium-width-content">
+
+<!-- Start of "recent posts" feed -->
+
+<div class="recent-posts-bg full-width-content">
+  <div class="recent-posts medium-width-content">
     <h2 class="feature-heading">Latest Posts</h2>
     <div class="feed-container">
-      <p style="margin-top: 20px;">I'm a proud <a href="https://theconversation.com/im-a-luddite-you-should-be-one-too-163172" target="_blank" alt="'I'm a Luddite. You should be one too.' by Jathan Sadowski on TheConversation.com">luddite</a> and I'm doing my best to move away from the tech-monopoly platforms. 
-        While you can still find me on Instagram and Substack, I try to follow the <a href="https://indieweb.org/POSSE" target="_blank" alt="POSSE page on IndieWeb.org">POSSE</a> system 
-        and keep everything I post originated from or cross-posted here.</p>
       <div class="feed-preview">
         <ul class="post-list">
+
         {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 5) }}
         {{ range $paginator.Pages  }}
+
             <li class="post-container">
-          {{ if .Title }}
-            <h1 class="post-preview-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-          {{ end }}
+
+            {{ if .Title }}
+
+              <h1 class="post-preview-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+            
+            {{ end }}
+
               <div class="post-date">
                 <a href="{{ .Permalink }}" class="u-url"><span><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a>
               </div>
+
             <!--  This "read more" feature is pulled from Matt Langford's Tiny Theme, 
                   which my site used to use and many of my posts contain. 
                   Credit to Matt, who you should support (with money ;) if you pull this code from my theme. -->
+
             {{ if in .RawContent "<!--more-->" }}
+
               <div class="p-summary">
                   {{ $splitContents := split .RawContent "<!--more-->" }}
                   {{ $summary := index $splitContents 0 }}
@@ -41,19 +46,35 @@
                       Read More →
                   </a></p>
               </div>
+
               {{ else }}
+
               <div class="post-text">
                 {{ .Content }}
               </div>
+
               {{ end }}
+              
             </li>
+
           {{ end }}
+
         </ul>
-          <div class="simon-button">
-                <a href="/archive" target="_blank" title="View full post archive." alt="Link to Post Archive"><h3>More Posts</h3></a>
-          </div>
+
+        <div class="simon-button">
+              <a href="/archive" target="_blank" title="View full post archive." alt="Link to Post Archive"><h3>More Posts</h3></a>
+        </div>
+
       </div>
-    <p class="rss-subscribe">Subscribe via <a href="{{ "feed.xml" | absURL }}"><img src="https://simonpeng.net/uploads/2025/rss.gif"></a></p>
+      <div  style="margin-top: 20px;">
+        <h5>Following Me</h5>
+        <p>
+          I'm a proud <a href="https://www.everyonescreative.net/p/why-every-artist-needs-to-be-a-luddite" target="_blank" alt="Everyone's Creative: Embrace Luddism">luddite</a> 
+          and I'm doing my best to move away from the tech-monopoly platforms. I try to follow the <a href="https://indieweb.org/POSSE" target="_blank" alt="POSSE page on IndieWeb.org">POSSE</a> 
+          system and keep everything I post originated from or cross-posted here.
+        </p>
+        <p>Other than this site, you can find all the places to follow me <a href="/links">on my links page.</a></p>
+      </div>
     </div> 
   </div>
 </div>

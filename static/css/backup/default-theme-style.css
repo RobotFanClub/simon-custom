@@ -25,6 +25,7 @@ figcaption { font-size: 17.5px; }
 /** Page content */
 .page-content { 
     padding: inherit;
+    background-color: var(--background);
 }
 
 .page-heading { font-size: 20px; }

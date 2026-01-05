@@ -24,7 +24,7 @@ h1 {
 
 h2 { 
     font-size: 20px;
-    font-weight: 600; 
+    font-weight: 500; 
     margin-bottom: 0px; 
 }
 
@@ -79,3 +79,12 @@ code { padding: 1px 5px; }
 
 pre { padding: 8px 12px; overflow-x: scroll; }
 pre > code { border: 0; padding-right: 0; padding-left: 0; }
+
+/** Captions and Small Text */
+
+.photo-caption {
+    font-family: 'drafting-mono';
+    font-size: 0.7rem;
+    line-height: 1.125;
+    padding-top: 1em;
+}
