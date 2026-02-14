@@ -33,6 +33,14 @@
                 
             </div>
         </div>
+        <div>
+            <h3>📖 Right Now I'm Reading...</h4>
+            {{ range .Site.Data.bookshelves.currentlyreading }}
+                <a href="https://micro.blog/books/{{ .isbn }}">
+                    {{ .title }} by {{ .author }}
+                </a>
+            {{ end }}
+        </div>
     </div>
 </div>
 

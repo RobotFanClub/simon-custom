@@ -114,25 +114,39 @@ p a:hover { color: var(--link); text-decoration: underline; }
 .site-nav .page-link { color: var(--text); line-height: 1.5; }
 .site-nav .page-link:not(:first-child) { margin-left: 20px; }
 @media screen and (max-width: 600px) { 
-  .site-nav { 
-    position: absolute; 
-    top: 20px; 
-    right: 20px;
-    text-align: right; 
-	padding: 0.3em 0.5em 0em 0.5em;
-	background-color: var(--background); 
-    border: 1px solid var(--code); 
-    border-radius: var(--rounded_corners); 
-  }
-  .site-nav .menu-icon { 
-    display: block; 
-    float: right; 
-    width: 20px; 
-    height: 20px; 
-    line-height: 0; 
-    padding: 0px; 
-    text-align: center; 
-  }
+  
+	.site-header {
+		min-height: 60px;
+		padding: 1em 0.5em 0.5em 0.5em;
+	}
+	
+	.site-nav { 
+		position: absolute; 
+		top: 30px; 
+		right: 30px;
+		text-align: right; 
+		padding: 0.3em 0.5em 0em 0.5em;
+		background-color: var(--background); 
+		border: 1px solid var(--code); 
+		border-radius: var(--rounded_corners); 
+		z-index: 2;
+	}
+	
+	.site-nav .menu-icon { 
+		display: block; 
+		float: right; 
+		width: 20px; 
+		height: 20px; 
+		line-height: 0; 
+		padding: 0px; 
+		text-align: center; 
+	}
+
+	.feature-heading {
+		font-size: 2.5em;
+		line-height: 1;
+		padding-bottom: 0.4em;
+	}
   
   /* SVG styling for the old menu icon, replaced width FA icon.
   
@@ -156,7 +170,7 @@ p a:hover { color: var(--link); text-decoration: underline; }
 /** Homepage Content */
 .home-intro {
 	display: grid;
-	grid-template-columns: 25% 50%;
+	grid-template-columns: 33.33% 66.66%;
 	flex-wrap: nowrap;
 	gap: 20px;
 	align-items: center;
@@ -168,6 +182,12 @@ p a:hover { color: var(--link); text-decoration: underline; }
 .home-intro-text {
   margin: 1em;
   
+}
+
+.simon-headshot {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
 }
 
 .simon-button {
@@ -254,10 +274,17 @@ p a:hover { color: var(--link); text-decoration: underline; }
 	.home-intro {
 		display: grid;
 		grid-template-columns: auto;
+		padding: 2em 1em;
+	}
+
+	.simon-headshot {
+		max-height: 300px;
+		max-width: 250px;
 	}
 
 	.home-intro-text {
 		max-width: none;
+		margin: 0em;
 	}
 
 	.feed-container {

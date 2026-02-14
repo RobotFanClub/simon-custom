@@ -11,10 +11,17 @@
 .about-headshot {
     width: 300px;
     height: auto;
-    margin: 0 2em 1.5em 0;
+    margin: 0 2em 1em 0;
     float: left;
 }
 
 .about-bio-text {
     font-family: inherit;
+}
+
+@media screen and (max-width: 600px) { 
+    .about-headshot {
+        max-width: 100%;
+        height: auto;
+    }
 }
