@@ -51,6 +51,7 @@
 
 .socials-grid a {
 	text-decoration: none;
+	color: var(--link);
 }
 
 .link-icon {

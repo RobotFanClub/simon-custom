@@ -1,6 +1,7 @@
 /* Light mode */
 :root {
 	--text: #000000;
+	--rev-text: #fff;
 	--link: #470d6e;
 	--link_visited: #470d6e;
 	--accent1: #333333;
@@ -59,7 +60,7 @@
 	:root {
 		--text: #f8f8f2;
 		--link: #ffcd42;
-		--link_visited: #915f13;
+		--link_visited: #ea920e;
 		--accent1: #f8f8f2;
 		--accent2: #f8f8f2;
 		--background: #3c2e48;

@@ -19,6 +19,28 @@
     font-family: inherit;
 }
 
+.booklist {
+    display: inline-flex;
+    gap: 1em;
+}
+
+.book-entry {
+    transition-timing-function: ease-in;
+	transition: 0.2s;
+}
+
+.book-entry:hover {
+    transform: translateY(-5px);
+
+    transition-timing-function: ease-in;
+	transition: 0.2s;
+}
+
+.book-cover {
+    height: 10rem;
+    width: auto;
+}
+
 @media screen and (max-width: 600px) { 
     .about-headshot {
         max-width: 100%;
