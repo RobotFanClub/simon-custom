@@ -88,3 +88,13 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
     line-height: 1.125;
     padding-top: 1em;
 }
+
+/** Tables **/
+
+table a {
+    color: var(--link);
+}
+
+table a:visited {
+    color: var(--link_visited);
+}
