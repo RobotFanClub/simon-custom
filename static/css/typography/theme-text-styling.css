@@ -91,10 +91,10 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 /** Tables **/
 
-table a {
+td a {
     color: var(--link);
 }
 
-table a:visited {
+td a:visited {
     color: var(--link_visited);
 }
